@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
+    <title>Super Mario</title>
+</head>
+
+<body>
+    <div class="video-mario">
+        <video src="video.mp4" autoplay muted loop> </video>
+        <div class="mascara-video"> </div>
+    </div>
+
+    <div class="caixa-principal">
+        <img src="logo.png" alt="logo mario" class="imagem-super-mario">
+        <p>Os jogos da série Super Mario são normalmente ambientados no mundo fictício Mushroom Kingdom,
+            com Mario sendo o personagem jogável. Muitas vezes ele é acompanhado por seu irmão, Luigi, e
+            ocasionalmente por outros membros do elenco de Mario. Como um jogo de plataforma, o jogador pode
+            correr e saltar através de plataformas e sobre inimigos em fases temáticas.</p>
+        <br>
+        <p>Nestes jogos de aventura e plataforma, o Mario e o seu irmão Luigi vão salvar a
+            princesa Peach do terrível Bowser em missões emocionantes!</p>
+        <button onclick="cliqueiNoBotao()">Fale conosco</button>
+    </div>
+
+    <img src="mario.png" alt="logo mario luigi" class="imagem-mario-luigi">
+
+    <form class="fale-conosco" action="https://formsubmit.co/dda7b65bf102bef102266bdde9a09fc9" method="POST">
+
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="tel" name="telefone">
+        <textarea placeholder="Digite seu problema aqui" name="info"></textarea>
+        <button onclick="sumirFormulario()">Enviar formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
+</body>
+<script>
+
+    let formulario = document.querySelector(".fale-conosco")
+    let mascara = document.querySelector(".mascara-form")
+
+    function cliqueiNoBotao() {
+        formulario.style.left = "620px"
+        mascara.style.visibility = "visible"
+    }
+
+        function sumirFormulario() {
+            formulario.style.left = "-225px"
+            mascara.style.visibility = "hidden"
+        }
+
+
+</script>
+
+</html>
